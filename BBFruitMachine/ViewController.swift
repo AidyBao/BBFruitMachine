@@ -10,11 +10,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var bgView: UIView!
+    var fruitMachine:BBFruitMachine?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        fruitMachine = BBFruitMachine(frame: CGRect(x: 40, y: 470, width: self.view.frame.width - 40*2, height: 150))
+        fruitMachine?.backgroundColor = UIColor.orange
+        self.bgView.addSubview(fruitMachine!)
     }
-
-
+    
+    @IBAction func startAction(_ sender: Any) {
+        self.fruitMachine?.prizeResult()
+        self.fruitMachine?.start()
+    }
 }
 

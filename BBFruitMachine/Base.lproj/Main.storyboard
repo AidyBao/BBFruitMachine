@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,72 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BBFruitMachine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="STU-qd-eol">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="upc-IB-ckV">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lotter_bg" translatesAutoresizingMaskIntoConstraints="NO" id="eZX-2b-UcT">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dF-qj-4Vc">
+                                                <rect key="frame" x="157.5" y="527" width="60" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="Nzf-h4-B7U"/>
+                                                    <constraint firstAttribute="height" constant="60" id="ddJ-Vj-iwd"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="lottery_btn_go_up"/>
+                                                <connections>
+                                                    <action selector="startAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V0m-1n-Zam"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="4dF-qj-4Vc" secondAttribute="bottom" constant="80" id="QE3-GH-0Kg"/>
+                                            <constraint firstItem="eZX-2b-UcT" firstAttribute="leading" secondItem="upc-IB-ckV" secondAttribute="leading" id="Sfh-t6-V3A"/>
+                                            <constraint firstAttribute="bottom" secondItem="eZX-2b-UcT" secondAttribute="bottom" id="av6-oQ-1NH"/>
+                                            <constraint firstItem="4dF-qj-4Vc" firstAttribute="centerX" secondItem="upc-IB-ckV" secondAttribute="centerX" id="mtM-Mb-7fe"/>
+                                            <constraint firstItem="eZX-2b-UcT" firstAttribute="top" secondItem="upc-IB-ckV" secondAttribute="top" id="vMx-DH-zUx"/>
+                                            <constraint firstAttribute="trailing" secondItem="eZX-2b-UcT" secondAttribute="trailing" id="vPI-wb-ZEf"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="upc-IB-ckV" secondAttribute="bottom" id="2Ps-CV-7vN"/>
+                                    <constraint firstItem="upc-IB-ckV" firstAttribute="width" secondItem="STU-qd-eol" secondAttribute="width" id="3MH-iu-Y5q"/>
+                                    <constraint firstItem="upc-IB-ckV" firstAttribute="leading" secondItem="STU-qd-eol" secondAttribute="leading" id="V0n-bx-gfr"/>
+                                    <constraint firstItem="upc-IB-ckV" firstAttribute="top" secondItem="STU-qd-eol" secondAttribute="top" id="daK-FG-rbw"/>
+                                    <constraint firstAttribute="trailing" secondItem="upc-IB-ckV" secondAttribute="trailing" id="wry-oW-fop"/>
+                                    <constraint firstItem="upc-IB-ckV" firstAttribute="height" secondItem="STU-qd-eol" secondAttribute="height" id="zut-ia-b2e"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="STU-qd-eol" secondAttribute="trailing" id="8G7-9h-eEc"/>
+                            <constraint firstItem="STU-qd-eol" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="LxQ-PB-iMv"/>
+                            <constraint firstAttribute="bottom" secondItem="STU-qd-eol" secondAttribute="bottom" id="rj4-eI-IQ5"/>
+                            <constraint firstItem="STU-qd-eol" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="w68-F9-sSU"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="bgView" destination="upc-IB-ckV" id="bUa-JO-fGy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="lotter_bg" width="750" height="1566"/>
+        <image name="lottery_btn_go_up" width="217" height="182"/>
+    </resources>
 </document>

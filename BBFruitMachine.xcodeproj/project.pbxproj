@@ -12,6 +12,7 @@
 		7A47976D21A537940045A170 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A47976B21A537940045A170 /* Main.storyboard */; };
 		7A47976F21A5379C0045A170 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A47976E21A5379C0045A170 /* Assets.xcassets */; };
 		7A47977221A5379C0045A170 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A47977021A5379C0045A170 /* LaunchScreen.storyboard */; };
+		7A47977A21A53F740045A170 /* BBFruitMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A47977921A53F740045A170 /* BBFruitMachine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		7A47976E21A5379C0045A170 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A47977121A5379C0045A170 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A47977321A5379C0045A170 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A47977921A53F740045A170 /* BBFruitMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBFruitMachine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				7A47976721A537940045A170 /* AppDelegate.swift */,
 				7A47976921A537940045A170 /* ViewController.swift */,
+				7A47977921A53F740045A170 /* BBFruitMachine.swift */,
 				7A47976B21A537940045A170 /* Main.storyboard */,
 				7A47976E21A5379C0045A170 /* Assets.xcassets */,
 				7A47977021A5379C0045A170 /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			files = (
 				7A47976A21A537940045A170 /* ViewController.swift in Sources */,
 				7A47976821A537940045A170 /* AppDelegate.swift in Sources */,
+				7A47977A21A53F740045A170 /* BBFruitMachine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
