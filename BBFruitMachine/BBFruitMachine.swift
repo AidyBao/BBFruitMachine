@@ -65,7 +65,7 @@ class BBFruitMachine: UIView {
             
             self.fScrollLayerList.append(fScrollLayer)
             
-            let prizeImgVHeight = self.frame.size.height/3
+            let prizeImgVHeight = self.frame.size.height/1
             let prizeCount = self.prizeList.count
             let scrollLayerTopIndex = -(i + FMinTurn + 3) * prizeCount
             for j in scrollLayerTopIndex..<0 {
@@ -102,7 +102,6 @@ class BBFruitMachine: UIView {
                     for pLayer in self.fScrollLayerList {
                         pLayer.removeAllAnimations()
                     }
- 
 //                    self.currentSlideResult = self.prizeResultList
                 }
                 for (index, fScrollLayer)  in self.fScrollLayerList.enumerated() {
@@ -114,7 +113,7 @@ class BBFruitMachine: UIView {
                     let sliderAnimation = CABasicAnimation(keyPath: "position.y")
                     sliderAnimation.fillMode = .forwards
                     sliderAnimation.duration = Double(howManyIndex) * FSLIDERTIME
-                    let slideY = CGFloat(howManyIndex) * self.frame.size.height / 3
+                    let slideY = CGFloat(howManyIndex) * self.frame.size.height / 1
                     sliderAnimation.toValue = fScrollLayer.position.y + slideY
                     sliderAnimation.isRemovedOnCompletion = false
                     fScrollLayer.add(sliderAnimation, forKey: nil)
